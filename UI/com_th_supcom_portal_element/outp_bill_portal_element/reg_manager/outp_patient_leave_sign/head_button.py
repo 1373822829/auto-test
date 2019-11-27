@@ -1,0 +1,4 @@
+就诊时间 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/form/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/div/input'
+日期图标 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/form/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[2]/div/img'
+刷新 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/form/div[1]/div[2]/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[4]/table/tbody/tr[2]/td[2]/em/button'
+查询条件 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/form/div[1]/div[2]/div[1]/div/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td/div/input'

@@ -1,0 +1,777 @@
+2017-07-07 18:12:48,295 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-07 18:12:52,195 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-07 18:12:52,195 - __main__ - INFO - 开始运行挂号脚本
+2017-07-07 18:22:36,498 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-07 18:22:40,430 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-07 18:22:40,431 - __main__ - INFO - 开始运行挂号脚本
+2017-07-07 18:22:52,503 - __main__ - INFO - 挂号失败!
+2017-07-10 09:23:25,342 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-10 09:23:32,966 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-10 09:23:32,966 - __main__ - INFO - 开始运行挂号脚本
+2017-07-10 09:32:21,348 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-10 09:32:25,685 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-10 09:32:25,685 - __main__ - INFO - 开始运行挂号脚本
+2017-07-10 09:34:10,674 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-10 09:34:15,182 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-10 09:34:15,182 - __main__ - INFO - 开始运行挂号脚本
+2017-07-10 09:34:39,889 - __main__ - INFO - 挂号失败!
+2017-07-10 09:38:00,296 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-10 09:38:05,184 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-10 09:38:05,186 - __main__ - INFO - 开始运行挂号脚本
+2017-07-10 09:39:38,394 - __main__ - INFO - 挂号失败!
+2017-07-10 09:41:07,380 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-10 09:41:11,719 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-10 09:41:11,719 - __main__ - INFO - 开始运行挂号脚本
+2017-07-10 14:10:31,618 - __main__ - DEBUG - 开始运行自动化脚本
+2017-07-10 14:10:34,493 - login - INFO - 开始运行登陆脚本
+2017-07-10 14:10:38,340 - login - INFO - 登陆脚本运行结束
+2017-07-10 14:10:38,352 - PatientVisitCardService - INFO - 开始运行挂号脚本
+2017-07-10 14:11:20,767 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+Traceback (most recent call last):
+  File "D:\centaurus-a\UI\com_th_supcom_portal_main\test_main.py", line 82, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "D:\centaurus-a\UI\com_th_supcom_portal_service\outp_bill_portal_service\reg_manager\PatientVisitCardService.py", line 74, in test_regist
+    browser.find_element_by_xpath('//button[contains(text(),"是")]').click()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+
+2017-07-10 14:13:49,276 - __main__ - DEBUG - 开始运行自动化脚本
+2017-07-10 14:13:51,964 - login - INFO - 开始运行登陆脚本
+2017-07-10 14:13:55,936 - login - INFO - 登陆脚本运行结束
+2017-07-10 14:13:55,936 - PatientVisitCardService - INFO - 开始运行挂号脚本
+2017-07-10 14:14:16,700 - PatientVisitCardService - INFO - 挂号脚本运行结束
+2017-07-10 14:14:16,776 - PatientListOutOrderService - INFO - 开始运行工作站选择脚本
+2017-07-10 14:14:25,566 - UI.com_th_supcom_portal_service.outp_doctor_portal_service.adt_patient_manager.PatientListOutOrderService - INFO - 开始运行工作站选择脚本
+2017-07-10 14:14:33,094 - PatientListOutOrderService - INFO - 开始运行诊断脚本
+2017-07-10 14:14:45,721 - PatientListOutOrderService - INFO - 诊断脚本运行结束
+2017-07-10 14:14:45,721 - UI.com_th_supcom_portal_service.outp_doctor_portal_service.adt_patient_manager.PatientListOutOrderService - INFO - 开始运行诊断脚本
+2017-07-10 14:15:22,902 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+Traceback (most recent call last):
+  File "D:\centaurus-a\UI\com_th_supcom_portal_main\test_main.py", line 82, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "D:\centaurus-a\UI\com_th_supcom_portal_service\outp_doctor_portal_service\adt_patient_manager\PatientListOutOrderService.py", line 69, in test_diagnose
+    diagnoseTypeElement = browser.find_element_by_xpath(CpoeOutOrderElement.img[4]['key'])
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+
+2017-07-10 14:22:22,867 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 开始运行登陆脚本
+2017-07-10 14:22:27,500 - UI.com_th_supcom_portal_service.usercenter.login - INFO - 登陆脚本运行结束
+2017-07-10 14:27:18,834 - __main__ - DEBUG - 开始运行自动化脚本
+2017-07-10 14:27:18,837 - __main__ - INFO - 请指定测试用例!
+2017-07-10 16:02:29,583 - __main__ - INFO - 没有指定文件
+2017-07-24 12:43:17,212 - __main__ - DEBUG - 开始运行自动化脚本
+2017-07-24 12:43:20,186 - login - INFO - 开始运行登陆脚本
+2017-07-24 12:43:24,321 - login - INFO - 登陆脚本运行结束
+2017-07-24 12:43:24,324 - PatientVisitCardService - INFO - 开始运行挂号脚本
+2017-07-24 12:44:02,142 - PatientVisitCardService - INFO - 挂号脚本运行结束
+2017-08-03 16:49:10,584 - __main__ - DEBUG - 开始运行自动化脚本
+2017-08-03 16:49:13,316 - login - INFO - 开始运行登陆脚本
+2017-08-03 16:49:17,141 - login - INFO - 登陆脚本运行结束
+2017-08-03 16:50:09,950 - __main__ - DEBUG - 开始运行自动化脚本
+2017-08-03 16:50:12,489 - login - INFO - 开始运行登陆脚本
+2017-08-03 16:50:16,594 - login - INFO - 登陆脚本运行结束
+2017-08-03 16:50:16,600 - PatientVisitCardService - INFO - 开始运行挂号脚本
+2017-08-03 16:50:47,215 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such window
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+Traceback (most recent call last):
+  File "D:\centaurus-a\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "D:\centaurus-a\UI\com_th_supcom_portal_service\outp_bill_portal_service\reg_manager\PatientVisitCardService.py", line 19, in test_regist
+    login.select_workstation(browser,'门诊挂号收费工作台',cache)
+  File "D:\centaurus-a\UI\com_th_supcom_portal_service\usercenter\login.py", line 85, in select_workstation
+    browser.switch_to_window(handle)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 568, in switch_to_window
+    self._switch_to.window(window_name)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\switch_to.py", line 112, in window
+    self._driver.execute(Command.SWITCH_TO_WINDOW, data)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+
+2017-08-05 19:00:07,785 - UI.com_th_supcom_portal_main.test_main - ERROR - 'portal登录'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 63, in callmoudle
+    moudel_list = work.workstation_include_moudle[workstation[0]]
+KeyError: 'portal登录'
+2017-08-05 19:03:36,802 - login - INFO - 开始运行登陆脚本
+2017-08-05 19:04:08,118 - UI.com_th_supcom_portal_main.test_main - ERROR - 'NoneType' object has no attribute 'clear'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 40, in test_login
+    browser.find_element_by_xpath(portal.用户名).clear()
+AttributeError: 'NoneType' object has no attribute 'clear'
+2017-08-05 20:02:33,217 - login - INFO - 开始运行登陆脚本
+2017-08-05 20:03:19,031 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 40, in test_login
+    browser.find_element_by_xpath(portal.用户名).clear()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.3 x86_64)
+
+2017-08-09 16:02:14,774 - login - INFO - 开始运行登陆脚本
+2017-08-09 16:03:01,521 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.93 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 829f1ad0c7eb74eb43e37b7ad8e9a39d
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 40, in test_login
+    browser.find_element_by_xpath(portal.用户名).clear()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.93 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 829f1ad0c7eb74eb43e37b7ad8e9a39d
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+2017-08-09 16:21:11,088 - login - INFO - 开始运行登陆脚本
+2017-08-09 16:21:56,612 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.32 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 99682008c1adcbe7d82c45d4dfb09bee
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 40, in test_login
+    browser.find_element_by_xpath(portal.用户名).clear()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23.32 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 99682008c1adcbe7d82c45d4dfb09bee
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+2017-08-09 16:32:44,604 - login - INFO - 开始运行登陆脚本
+2017-08-09 16:33:31,062 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 89b71a1d243c7b98b8639868017c9923
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 40, in test_login
+    browser.find_element_by_xpath(portal.用户名).clear()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 89b71a1d243c7b98b8639868017c9923
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+2017-08-09 16:33:56,638 - login - INFO - 开始运行登陆脚本
+2017-08-09 16:34:42,997 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4991c446143fc2275f74132acb3c2c17
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 40, in test_login
+    browser.find_element_by_xpath(portal.用户名).clear()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 24.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.6.44', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4991c446143fc2275f74132acb3c2c17
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+2017-08-11 10:36:34,858 - login - INFO - 开始运行登陆脚本
+2017-08-11 10:36:40,550 - login - INFO - 登陆脚本运行结束
+2017-08-11 11:07:42,520 - login - INFO - 开始运行登陆脚本
+2017-08-11 11:07:46,836 - login - INFO - 登陆脚本运行结束
+2017-08-11 11:17:17,713 - login - INFO - 开始运行登陆脚本
+2017-08-11 11:17:22,102 - login - INFO - 登陆脚本运行结束
+2017-08-11 11:29:48,703 - login - INFO - 开始运行登陆脚本
+2017-08-11 11:29:54,593 - login - INFO - 登陆脚本运行结束
+2017-08-11 15:28:41,627 - login - INFO - 开始运行登陆脚本
+2017-08-11 15:28:46,955 - login - INFO - 登陆脚本运行结束
+2017-08-11 15:39:25,386 - login - INFO - 开始运行登陆脚本
+2017-08-11 15:39:50,251 - login - INFO - 登陆脚本运行结束
+2017-08-11 16:16:39,837 - login - INFO - 开始运行登陆脚本
+2017-08-11 16:16:44,660 - login - INFO - 登陆脚本运行结束
+2017-10-11 14:02:51,905 - login - INFO - 开始运行登陆脚本
+2017-10-11 14:03:04,401 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 16 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.5.178', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3cec6f95cadc975b877e781d9287a289
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:694)
+    at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.getCookies (RemoteWebDriver.java:781)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringOptions.getCookies (EventFiringWebDriver.java:530)
+    at org.openqa.selenium.remote.server.handler.GetAllCookies.call (GetAllCookies.java:34)
+    at org.openqa.selenium.remote.server.handler.GetAllCookies.call (GetAllCookies.java:26)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 34, in test_login
+    cookies = browser.get_cookies()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 624, in get_cookies
+    return self.execute(Command.GET_ALL_COOKIES)['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 16 milliseconds
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '192.168.5.178', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 3cec6f95cadc975b877e781d9287a289
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:694)
+    at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.getCookies (RemoteWebDriver.java:781)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringOptions.getCookies (EventFiringWebDriver.java:530)
+    at org.openqa.selenium.remote.server.handler.GetAllCookies.call (GetAllCookies.java:34)
+    at org.openqa.selenium.remote.server.handler.GetAllCookies.call (GetAllCookies.java:26)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+2017-10-11 14:17:38,475 - login - INFO - 开始运行登陆脚本
+2017-10-11 14:18:15,017 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '10.10.131.130', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d0fb925140073b8eacb957a7e59fbb4c
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 40, in test_login
+    browser.find_element_by_xpath(portal.用户名).clear()
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 293, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '10.10.131.130', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d0fb925140073b8eacb957a7e59fbb4c
+*** Element info: {Using=xpath, value=/html/body/div/div/div[1]/form/div[1]/input}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath (RemoteWebDriver.java:509)
+    at org.openqa.selenium.By$ByXPath.findElement (By.java:361)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+2017-10-20 16:09:07,405 - login - INFO - 开始运行登陆脚本
+2017-10-20 16:15:41,052 - login - INFO - 登陆脚本运行结束
+2017-10-20 16:15:41,160 - PatientVisitCardService - INFO - 开始运行挂号脚本
+2017-10-20 16:18:26,867 - UI.com_th_supcom_portal_main.test_main - ERROR - Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '10.10.131.97', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6d43c4e302854cecbb64b5dc2c0dbf25
+*** Element info: {Using=link text, value=门诊挂号收费工作台}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText (RemoteWebDriver.java:461)
+    at org.openqa.selenium.By$ByLinkText.findElement (By.java:246)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_main\test_main.py", line 83, in callmoudle
+    fun(browser,test_case[workstation[1]][num],cachedata)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\outp_bill_portal_service\reg_manager\PatientVisitCardService.py", line 19, in test_regist
+    login.select_workstation(browser,'门诊挂号收费工作台',cache)
+  File "C:\Users\Administrator\PycharmProjects\untitled1\UI\com_th_supcom_portal_service\usercenter\login.py", line 76, in select_workstation
+    browser.find_element_by_link_text(workstation).send_keys(Keys.ENTER)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 317, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 752, in find_element
+    'value': value})['value']
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 236, in execute
+    self.error_handler.check_response(response)
+  File "D:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 192, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element
+  (Session info: chrome=39.0.2171.71)
+  (Driver info: chromedriver=2.7.236900,platform=Windows NT 6.1 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.04 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'WIN7-1707281650', ip: '10.10.131.97', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, chrome={userDataDir=C:\Users\Administrator\AppData\Local\Google\Chrome\User Data}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=39.0.2171.71, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6d43c4e302854cecbb64b5dc2c0dbf25
+*** Element info: {Using=link text, value=门诊挂号收费工作台}
+Screenshot: available via screen
+Stacktrace:
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance0 (NativeConstructorAccessorImpl.java:-2)
+    at sun.reflect.NativeConstructorAccessorImpl.newInstance (NativeConstructorAccessorImpl.java:62)
+    at sun.reflect.DelegatingConstructorAccessorImpl.newInstance (DelegatingConstructorAccessorImpl.java:45)
+    at java.lang.reflect.Constructor.newInstance (Constructor.java:423)
+    at org.openqa.selenium.remote.ErrorHandler.createThrowable (ErrorHandler.java:215)
+    at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed (ErrorHandler.java:167)
+    at org.openqa.selenium.remote.RemoteWebDriver.execute (RemoteWebDriver.java:671)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:410)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText (RemoteWebDriver.java:461)
+    at org.openqa.selenium.By$ByLinkText.findElement (By.java:246)
+    at org.openqa.selenium.remote.RemoteWebDriver.findElement (RemoteWebDriver.java:402)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (NativeMethodAccessorImpl.java:-2)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke (EventFiringWebDriver.java:104)
+    at com.sun.proxy.$Proxy6.findElement (None:-1)
+    at org.openqa.selenium.support.events.EventFiringWebDriver.findElement (EventFiringWebDriver.java:188)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:48)
+    at org.openqa.selenium.remote.server.handler.FindElement.call (FindElement.java:33)
+    at java.util.concurrent.FutureTask.run (FutureTask.java:266)
+    at org.openqa.selenium.remote.server.DefaultSession$1.run (DefaultSession.java:176)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker (ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run (ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run (Thread.java:748)

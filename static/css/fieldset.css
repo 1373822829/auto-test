@@ -1,0 +1,25 @@
+.lq-fieldset{border:1px solid;padding:10px;/*margin-bottom:10px;*/display:block;}
+.lq-fieldset.collapse{padding-bottom:0 !important;border-width:1px 1px 0 1px !important;border-left-color:transparent;border-right-color:transparent;}
+.lq-fieldset.expand{}
+
+.lq-fieldset .lq-fieldset-wrapmain{overflow:auto;}
+.lq-fieldset.expand .lq-fieldset-wrapmain{display:block;}
+.lq-fieldset.collapse .lq-fieldset-wrapmain{display:none;}
+
+.lq-fieldset-legend{}
+.lq-fieldset-legend a{width:16px;height:16px;opacity:0.6;display:inline-block;margin:0 2px 0 2px;vertical-align:top}
+.lq-fieldset-legend a.mouseout{opacity:0.6;}
+.lq-fieldset-legend a.mouseover{opacity:1;}
+
+.lq-fieldset-legend>span{font:bold 12px verdana,helvetica,arial,sans-serif;}
+
+/*yuan jiao*/
+.lq-fieldset{border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;}
+
+/*icon*/
+.collapse .lq-fieldset-legend-icon{background: url('../images/panel_tools.png') no-repeat -32px -16px;}
+.expand .lq-fieldset-legend-icon{background: url('../images/panel_tools.png') no-repeat -32px 0;}
+
+/***color***/
+.lq-fieldset{border-color: #95B8E7;}/*边框颜色*/
+.lq-fieldset-legend>span{color:#15428b;}/*标题颜色*/

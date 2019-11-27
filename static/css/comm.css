@@ -1,0 +1,109 @@
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 { font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;}
+
+
+a{color:#4C73AF;text-decoration:none; }
+a:hover {//对鼠标放到超链接上文字颜色样式变为color:#CC3300;并文字链接加下划线text-decoration:underline;
+	color:#1395EC;
+	text-decoration:underline;
+	}
+
+/* *{
+	font-size:	12px;
+	} */
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.header2 {
+    height: 200px;
+    
+    background-repeat: repeat;
+    /*background: #666;
+    direction: ltr;*/
+}
+
+.logo {
+    padding: 10px;
+    font-size: 30px;
+    float: left;
+    color: #0e2d5f;
+}
+
+.contact {
+    text-align: right;
+    height: 65px;
+    padding: 10px;
+}
+
+.prompt {
+    color: #666;
+    margin: 0 15px;
+}
+
+
+.headerMenu ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.headerMenu a:link, .headerMenu a:visited {
+    text-decoration: none;
+}
+
+.headerMenu a:hover {
+    text-decoration: underline;
+}
+
+.headerMenu ul li {
+    margin: 0 10px;
+    float: right;
+    display: block;
+}
+
+    .headerMenu ul li a:link, .headerMenu ul li a:visited {
+        color: #666;
+    }
+
+.headerMenuDiv {
+    width: 1px;
+    height: 13px;
+    background: #999;
+}
+
+.footer {
+    height: 25px;
+    color: #707070;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-border-box: border-box;
+/*     background-image: url('../image/bg3.png'); */
+    background-repeat: repeat-x;
+    background-position: 0 -182px;
+}
+
+
+#divMenuBar {
+    width: 200px;
+}
+
+#divHeader {
+    height: 60px;
+    overflow: hidden;
+}
+
+#divFooter {
+    height: 25px;
+}
+
+#divTitleBar {
+    padding: 10px;
+}
+

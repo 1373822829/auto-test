@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="../static/images/basic.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/comm.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/IconExtension.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../static/themes/icon.css">
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../static/js/main.js"></script>
+	<script type="text/javascript" src="../static/js/edit.js"></script>
+    <script type="text/javascript" src="../static/js/JsonExportExcel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/fieldset.css"/>
+    <script type="text/javascript" src="../static/js/fieldset.js"></script>
+    <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
+    <script type="text/javascript" src="../static/js/datagrid-groupview.js"></script>
+
+</head>
+<body>
+    <div style="height: 100%;border-left: hidden" >
+        <div style="padding:5px 0;background-color: #f5f5f5;border:1px solid #8fb1de;">
+            <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" group="" id="dd" style="margin-left: 5px" onclick="addCaseDetails()"><span class="l-btn-text" style="margin-left:1px">增加</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-remove'" group="" id="" onclick="deleteCaseDetail()"><span class="l-btn-text" style="margin-left:1px">移除</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-reload'" group="" id="" onclick="load_testcase_detail()"><span class="l-btn-text" style="margin-left:1px">刷新</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-ok'" group="" id="" onclick="action()"><span class="l-btn-text" style="margin-left:1px">执行用例</span></a>
+        </div>
+
+        <div id="dlg"  class="easyui-dialog" title="用例信息编辑"  style="width:1000px;height:800px;">
+            <div style="width:1366px;padding: 10px;background: #eef4ff">
+                <div id="fs">
+                    <table>
+                        <tr>
+                            <td class="text-align-right" style="font-size: 14px">工作站：</td>
+                            <td>
+                                <select class="easyui-combobox" id="way_cb" name="state" label="" labelPosition="top" style="width:100%">
+
+                                </select>
+                            </td>
+
+                            <td class="text-align-right" style="font-size: 14px;padding-left: 25px;">用例名称：</td>
+                            <td><select class="easyui-combobox" id="way_cbs" name="state" label="" labelPosition="top" style="width:100%"></select></td>
+
+                            <td style="padding-left: 350px"><a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" group="" id="dd" style="margin-left: 5px" onclick=""><span class="l-btn-text" style="margin-left:1px">查询</span></a></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <table class="easyui-datagrid" id="dag"
+            data-options="url:'',method:'',singleSelect:false,fit:true,fitColumns:true" style="">
+            </table>
+
+        </div>
+
+        <table class="easyui-datagrid" id="dg"
+            data-options="url:'',method:'',singleSelect:false,fit:true,fitColumns:true" style="">
+        </table>
+
+    </div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+    //加载执行用例
+    $(function(){
+    $("#fs").lqfieldset({
+        title:'查询面板',
+        collapsible:true,
+        collapsed:false,
+        checkboxToggle:false
+        });
+        load_case_detail();
+    });
+
+    //加载执行用例详细明细表头
+    $('#dbg').datagrid({
+            fitColumns: true,
+            singleSelect: true,
+            loadMsg: '',
+            height:'auto',
+            autoRowHeight: true,
+            columns : [[
+                    {field:'box',checkbox:true,width:10,align:'center'},
+                    {field:'testcase_num',title:'用例编号',width:80,align:'center',sortable:true},
+                    {field:'workstation',title:'工作站',width:80,align:'center',sortable:true},
+                    {field:'action',title:'用例步骤',width:80,align:'center',sortable:true},
+                    {field:'data',title:'用例数据（execl）',width:80,align:'center',sortable:true},
+                    {field:'sheet_name',title:'sheet名字',width:80,align:'center',sortable:true},
+                    {field:'get_value_way',title:'数据取值方式',width:80,align:'center',sortable:true},
+                    {field:'iscache',title:'数据缓存',width:80,align:'center',sortable:true},
+                    {field:'runtime',title:'运行次数',width:80,align:'center',sortable:true},
+
+                ]],
+
+                })
+     //执行用例表头
+     $('#dg').datagrid({
+         columns : [[
+                    {field:'case_num',title:'用例编号',width:80,align:'center',sortable:true},
+                    {field:'workstation',title:'工作站',width:80,align:'center',sortable:true},
+                    {field:'case_name',title:'用例名称',width:80,align:'center',sortable:true},
+                    {field:'data',title:'用例数据',width:80,align:'center',sortable:true},
+                    {field:'detail',title:'详情',width:80,align:'center',sortable:true},
+                    ]],
+     })
+     //所有执行用例表头
+     $('#dag').datagrid({
+                        columns : [[
+                                {field:'box',checkbox:true,width:10,align:'center'},
+                                {field:'case_num',title:'用例编号',width:80,align:'center',sortable:true},
+                                {field:'workstation',title:'工作站',width:80,align:'center',sortable:true},
+                                {field:'case_name',title:'用例名称',width:80,align:'center',sortable:true},
+                                {field:'data',title:'用例数据',width:80,align:'center',sortable:true},
+                            ]],
+                    })
+     $('#dlg').dialog({
+             buttons: [{
+                width:100,
+                text: '保存',
+                iconCls: 'icon-ok',
+                handler: function () {
+                    saveCaseDetail();
+                }
+
+            },{
+                width:100,
+                text: '取消',
+                iconCls: 'icon-cancel',
+                handler: function () {
+                    $('#dlg').dialog('close');
+                }
+            }
+            ]
+        });
+    function GetQueryString(name)
+        {
+             var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+             var r = window.location.search.substr(1).match(reg);
+             if(r!=null)return  decodeURI(r[2]); return null;
+        }
+    //加载执行用例
+    function load_case_detail() {
+          $.ajax({
+            type : "post",
+            url : basePath+'case_detail/',
+            async : false,
+            dataType : 'json',
+            data : {'case_id':GetQueryString('id')},
+            success : function (data) {
+                displayDetail('#dg');
+                $('#dg').datagrid('loadData',data)
+            },
+            error :function (data) {
+                $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+            }
+
+        })
+    }
+    //加载所有的用例
+    function addCaseDetails() {
+    $('#dlg').dialog('open');
+    loadWorkstationCombobox('#way_cb');
+    loadActionCombobox('#way_cbs');
+    $.ajax({
+            type : "post",
+            url : basePath+'case_details/',
+            async : false,
+            dataType : 'json',
+            data : {'case_id':GetQueryString('id')},
+            success : function (data) {
+                displayDetail('#dag');
+                $('#dag').datagrid('loadData',data);
+            },
+            error :function (data) {
+                $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+            }
+
+        })
+    }
+    //加载用例详情action
+    function loade_detail_action() {
+        alert('加载详情')
+
+    }
+    //加载详情
+    function displayDetail(id) {
+        $(id).datagrid({
+            pagination: true,
+            view: detailview,
+            detailFormatter:function(index,row){
+                return '<div style="padding:2px;"><table class="ddv"></table></div>';
+            },
+            onExpandRow: function(index,row) {//父亲级列表，注意此时行索引为index
+                var ddv = $(this).datagrid('getRowDetail', index).find('table.ddv');
+                ddv.datagrid({
+                    fitColumns: true,
+                    singleSelect: false,
+                    loadMsg: 'loading....',
+                    //height:'auto',
+                    autoRowHeight: true,
+                    columns: [[
+                            {field:'testcase_num',title:'用例编号',width:80,align:'center',sortable:true},
+                            {field:'workstation',title:'工作站',width:80,align:'center',sortable:true},
+                            {field:'action',title:'用例步骤',width:80,align:'center',sortable:true},
+                            {field:'sheet_name',title:'sheet名字',width:80,align:'center',sortable:true},
+                            {field:'get_value_way',title:'数据取值方式',width:80,align:'center',sortable:true},
+                            {field:'iscache',title:'数据缓存',width:80,align:'center',sortable:true},
+                            {field:'runtime',title:'运行次数',width:80,align:'center',sortable:true},
+
+                    ]],
+
+
+                })
+                load_testcase_detail(ddv,row.testcase_id);
+
+            }
+            });
+
+        
+    }
+
+    //保存测试用例
+    function saveCaseDetail() {
+        var row = $('#dag').datagrid('getSelected');
+        if (row == null) {
+            $.messager.alert('提示', '没有要新增的用例！', 'warning')
+            return
+        }
+        var rows = $('#dag').datagrid('getChecked')
+        console.log(rows)
+        $.ajax({
+            type: 'post',
+            url: basePath + 'addCaseDetail/',
+            async: false,
+            dataType: 'json',
+            data: {'data':JSON.stringify(rows),'case_id':GetQueryString('id')},
+            success: function (data) {
+                if (data.status){
+                    $.messager.show({
+                        title: 'Success',
+                        msg: data.message
+                    })
+                     $('#dlg').dialog('close');
+                    load_case_detail();
+                }else {
+                    $.messager.alert('提示',data.message,'warning')
+                }
+
+            },
+            error: function (data) {
+                $('#dlg').dialog('close');
+                $.messager.alert({title: '错误', msg: data.responseText, icon: 'error', height: 200})
+            }
+        })
+    }
+    //删除用例
+    function deleteCaseDetail() {
+        //获取选中的用例
+        var rows = $('#dg').datagrid('getChecked');
+        //判断是否有用例被选中,如果没有用例则弹出提示框
+        if (rows.length < 1) {
+            $.messager.alert('提示', '没有要新增的用例！', 'warning')
+            return
+        }
+        //如果有用例，则将用例的所有id通过ajax传入后台,以减少数据的传输
+        var list = [];
+        for (var i = 0; i < rows.length; i++) {
+            list[i] = rows[i].id
+        }
+        $.messager.confirm('温馨提示', '确定删除用例？', function (r) {
+            if (r) {
+                $.ajax({
+                    type: 'post',
+                    url: basePath + 'deleteCaseDetail/',
+                    async: false,
+                    dataType: 'json',
+                    data: {'data': JSON.stringify(list)},
+                    success: function (data) {
+                        if (data.status) {
+                            $.messager.show({
+                                title: 'Success',
+                                msg: data.message
+                            })
+                            load_case_detail();
+                        } else {
+                            $.messager.alert('提示', data.message, 'warning')
+                        }
+
+                    },
+                    error: function (data) {
+                        $('#dlg').dialog('close');
+                        $.messager.alert({title: '错误', msg: data.responseText, icon: 'error', height: 200})
+                    }
+                })
+            }
+        })
+
+    }
+
+
+
+
+
+</script>

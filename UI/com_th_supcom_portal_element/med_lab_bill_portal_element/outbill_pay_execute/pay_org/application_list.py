@@ -1,0 +1,5 @@
+申请单号 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[2]/div[1]/div[1]/div/div[1]/div/div[1]/div/input'
+开单时间 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[2]/div[1]/div[2]/div/div[1]/div/div[1]/div/input'
+截止时间 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[2]/div[1]/div[2]/div/div[2]/div/div[1]/div/input'
+申请单列表 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[2]'
+查询 = '/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[2]/div[2]/table/tbody/tr[2]/td[2]/em/button'

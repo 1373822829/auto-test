@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> TEST-自动化测试平台</title>
+	<link rel="shortcut icon" href="../static/images/basic.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/comm.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/IconExtension.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../static/themes/icon.css">
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../static/js/main.js"></script>
+	<script type="text/javascript" src="../static/js/edit.js"></script>
+	<script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+	<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+	<style>
+	  <!--.testcase:hover{background-color:#c0c0c0}-->
+        li{
+            border:1px solid #ededed;
+            border-bottom:hidden;
+            border-right:hidden;
+            border-left:hidden;
+
+        }
+	</style>
+</head>
+<body class="easyui-layout" style="overflow-y: hidden" scroll="no" >
+
+	<noscript>
+        <div style="position: absolute; z-index: 100000; height: 2046px; top: 0px; left: 0px;
+            width: 100%; background: white; text-align: center;">
+            <img src="../static/images/noscript.gif" alt='抱歉，请开启脚本支持！' />
+        </div>
+    </noscript>
+
+	<div id="divHeader" data-options="region:'north',border:false,split:true">
+
+        <div class="header2" style="background-image: url('../static/images/bg2.jpg');">
+            <div class="logo" >
+                <div id="Layer1" style="position:absolute; width:58px; height:40px; z-index:1; left: 5px; top: 8px;"><img src="../static/images/login.png"></div>
+                <strong  style="margin-left:120px;  color:#FFFFFF; margin-top :100px;">自动化测试平台</strong>
+            </div>
+
+
+       	    <div class="contact" style='padding-top :30px;'>
+
+				<div class="headerMenu">
+
+
+{#					<a  title='' style="padding:10px;" ><span style="width:100px;float:left;right:150px; padding:4px;margin-right:10px;;font-size:12px;" class="label label-success">云端版</span></a>#}
+					<a  style="margin-right:10px;" href="javascript:void(0)" onclick="window.open('http://www.tjhcc.com.cn:92/')"   ><span style="float:left;right:150px;padding:4px;font-size:12px;" class="label label-info">版本：v0.1.0</span></a>
+
+
+					<span class="label label-default" style="display:none;float:left;right:150px;padding:4px;font-size:12px;margin-left:10px;" id="serverTime"></span>
+
+
+
+					<button type="button"   class="btn btn-default btn-xs" href="javascript:void(0)" onclick="$('#icon-help').click()" >
+					    <span class="glyphicon glyphicon-question-sign"  ></span> 帮助中心
+				    </button>
+
+
+
+{#				    <button type="button"  id='sysload' class="btn btn-default btn-xs" href="javascript:void(0)" onclick="$('#icon-centos_16px_584190_easyicon').click()" >#}
+{#					    <span class="glyphicon glyphicon-leaf"  id="load_stat"></span> 系统负载:0.38#}
+{#				    </button>#}
+
+				    <button type="button"  id='yq' class="btn btn-default btn-xs">
+					    <span class="glyphicon glyphicon-home"></span>
+				    </button>
+
+
+                    <a href="#" >
+                       <button type="button" class="btn btn-default btn-xs" id = "ucenter"  onclick="$('#divTitleBar').click()">
+						  <span ><img src="../static/images/jwang.jpg" id='avatart' class="img-rounded" style="width:16px;height:16px; margin-right:6px;"/></span><span id='nick'>{{ user_name|safe }}</span>【开发】
+                       </button>
+
+
+
+                       <button type="button" class="btn btn-default btn-xs" id = "loginOut">
+                          <span class="glyphicon glyphicon-log-out"></span> 退出
+                       </button>
+
+                    </a>
+
+
+           	   </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div data-options="region:'west',title:'工作站菜单',split:true,iconCls:'icon-redo'" style="width:268px;">
+        <div style="background:#e8f1ff;padding:2px;margin-left:-1px;width:244px;border:1px solid #8fb1de;border-top:hidden;border-right: hidden;border-bottom: hidden;">
+            <a href="#" class="easyui-menubutton" menu="#mm1" iconCls="icon-css-add" id="add">新增</a>
+            <a href="#" class="easyui-linkbutton"  iconCls="icon-css-edit" style="border: hidden;background: #e8f1ff" onclick="updateMenu()"id="edit">编辑</a>
+            <a href="#" class="easyui-linkbutton"  iconCls="icon-css-delete" style="border: hidden;background: #e8f1ff" onclick="destroyMenu()"id="remove">删除</a>
+            <a href="#" class="easyui-linkbutton"  iconCls="icon-css-refresh" style="border: hidden;background: #e8f1ff"onclick="location.reload()">刷新</a>
+        </div>
+        <div id="mm1" style="width:150px;">
+            <div iconCls="icon-css-add" onclick="$('#w').window('open');" id="workstation_button">新增工作站</div>
+            <div iconCls="icon-css-add" onclick="$('#ww').window('open')" id="testcase_button">新增用例</div>
+
+        </div>
+        <div id="w" class="easyui-window" title="新增工作站" data-options="iconCls:'icon-save'" style="width:350px;height:150px;padding:5px;">
+            <div class="easyui-layout" data-options="fit:true">
+
+                <div data-options="region:'center'" style="padding:20px">
+                    <span>工作站名称:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <select id="workstation" class="easyui-combobox" name="state"  labelPosition="top" style="width:65%;">
+                        <option>门诊挂号收费工作站</option>
+                        <option>基础费用管理</option>
+                        <option>门诊医生站</option>
+                        <option>门诊辅诊站</option>
+                        <option>医技工作站</option>
+                        <option>门诊办公室工作站</option>
+                        <option>药房工作站</option>
+                        <option>药库工作站</option>
+                        <option>材料工作站</option>
+                        <option>住院费用管理工作站</option>
+                        <option>入出院登记工作站</option>
+                        <option>住院护士站</option>
+                        <option>住院医生站</option>
+                        <option>检查预约</option>
+                    </select>
+
+                </div>
+                <div data-options="region:'south',border:false" style="text-align:right;padding:5px 0 0;">
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="addWorkstation()" style="width:80px" id="workstation_save">保存</a>
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#w').window('close')" style="width:80px">取消</a>
+                </div>
+            </div>
+	    </div>
+        <div id="ww" class="easyui-window" title="新增用例" data-options="iconCls:'icon-save'" style="width:350px;height:150px;padding:5px;">
+            <div class="easyui-layout" data-options="fit:true">
+
+                <div data-options="region:'center'" style="padding:20px">
+                    <span>用例名称:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <input id="test_case" type="text" style="width:65%;">
+                </div>
+                <div data-options="region:'south',border:false" style="text-align:right;padding:5px 0 0;">
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" onclick="saveTestCase()" style="width:80px"id="testcase_save">保存</a>
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#ww').window('close')" style="width:80px">取消</a>
+                </div>
+            </div>
+	    </div>
+
+        <div id="w1" class="easyui-window" title="编辑工作站" data-options="iconCls:'icon-save'" style="width:350px;height:150px;padding:5px;">
+            <div class="easyui-layout" data-options="fit:true">
+
+                <div data-options="region:'center'" style="padding:20px">
+                    <span>工作站名称:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <select id="workstation1" class="easyui-combobox" name="state"  labelPosition="top" style="width:65%;">
+                        <option>门诊挂号收费工作站</option>
+                        <option>基础费用管理</option>
+                        <option>门诊医生站</option>
+                        <option>门诊辅诊站</option>
+                        <option>医技工作站</option>
+                        <option>门诊办公室工作站</option>
+                        <option>药房工作站</option>
+                        <option>药库工作站</option>
+                        <option>材料工作站</option>
+                        <option>住院费用管理工作站</option>
+                        <option>入出院登记工作站</option>
+                        <option>住院护士站</option>
+                        <option>住院医生站</option>
+                        <option>检查预约</option>
+                    </select>
+
+                </div>
+                <div data-options="region:'south',border:false" style="text-align:right;padding:5px 0 0;">
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)"  style="width:80px" id="workstation_save1" onclick="">保存</a>
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#w1').window('close')" style="width:80px">取消</a>
+                </div>
+            </div>
+	    </div>
+        <div id="ww1" class="easyui-window" title="编辑用例" data-options="iconCls:'icon-save'" style="width:350px;height:150px;padding:5px;">
+            <div class="easyui-layout" data-options="fit:true">
+
+                <div data-options="region:'center'" style="padding:20px">
+                    <span>用例名称:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <input id="test_case1" type="text" style="width:65%;">
+                </div>
+                <div data-options="region:'south',border:false" style="text-align:right;padding:5px 0 0;">
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" style="width:80px"id="testcase_save1" onclick="">保存</a>
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" onclick="$('#ww1').window('close')" style="width:80px">取消</a>
+                </div>
+            </div>
+	    </div>
+
+        <div class="easyui-panel" style="padding:0px;height:824px;" id="tree">
+            <ul class="easyui-tree" id="tt">
+            </ul>
+        </div>
+	</div>
+
+
+
+	<div data-options="region:'center',iconCls:'icon-ok'" style="background-color:#e8f1ff">
+		<div class="easyui-tabs" data-options="fit:true,border:false,plain:true" id="tab">
+            <div title="预览表" data-options="" style="text-align: center">
+               <div id="container" style="min-width:10px;height:400px"></div>
+            </div>
+	    </div>
+    </div>
+    <div id="rcmenu" class="easyui-menu" style="">
+        <div data-options="iconCls:'icon-cancel'" id="closecur">
+            关闭
+        </div>
+        <div id="closeall">
+            关闭全部
+        </div>
+        <div id="closeother">
+            关闭其他
+        </div>
+        <div class="menu-sep"></div>
+        <div id="closeright">
+            关闭右侧标签页
+        </div>
+        <div id="closeleft">
+            关闭左侧标签页
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    window.onload=function(){
+     $('#tt').tree('append',{data:{{data|safe}}})
+    $(function(){
+
+    $(".tabs-header").bind('contextmenu',function(e){
+        e.preventDefault();
+        $('#rcmenu').menu('show', {
+            left: e.pageX,
+            top: e.pageY
+        });
+    });
+    //关闭当前标签页
+    $("#closecur").bind("click",function(){
+        var tab = $('#tab').tabs('getSelected');
+        var index = $('#tab').tabs('getTabIndex',tab);
+        $('#tab').tabs('close',index);
+    });
+    //关闭所有标签页
+    $("#closeall").bind("click",function(){
+        var tablist = $('#tab').tabs('tabs');
+        for(var i=tablist.length-1;i>=0;i--){
+            $('#tab').tabs('close',i);
+        }
+    });
+    //关闭非当前标签页（先关闭右侧，再关闭左侧）
+    $("#closeother").bind("click",function(){
+        var tablist = $('#tab').tabs('tabs');
+        var tab = $('#tab').tabs('getSelected');
+        var index = $('#tab').tabs('getTabIndex',tab);
+        for(var i=tablist.length-1;i>index;i--){
+            $('#tab').tabs('close',i);
+        }
+        var num = index-1;
+        for(var i=num;i>=0;i--){
+            $('#tab').tabs('close',0);
+        }
+    });
+    //关闭当前标签页右侧标签页
+    $("#closeright").bind("click",function(){
+        var tablist = $('#tab').tabs('tabs');
+        var tab = $('#tab').tabs('getSelected');
+        var index = $('#tab').tabs('getTabIndex',tab);
+        for(var i=tablist.length-1;i>index;i--){
+            $('#tab').tabs('close',i);
+        }
+    });
+    //关闭当前标签页左侧标签页
+    $("#closeleft").bind("click",function(){
+        var tab = $('#tab').tabs('getSelected');
+        var index = $('#tab').tabs('getTabIndex',tab);
+        var num = index-1;
+        for(var i=0;i<=num;i++){
+            $('#tab').tabs('close',0);
+        }
+    });
+
+});
+}
+$(function () {
+    Highcharts.setOptions({
+            lang: {
+               　 printChart:"打印图表",
+                  downloadJPEG: "下载JPEG 图片" ,
+                  downloadPDF: "下载PDF文档"  ,
+                  downloadPNG: "下载PNG 图片"  ,
+                  downloadSVG: "下载SVG 矢量图" ,
+                  exportButtonTitle: "导出图片"
+            }
+        });
+    $('#container').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: '2017年版本上线测试统计'
+        },
+        xAxis: {
+            categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: '发包数量'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.1,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: '同济',
+            data: [8, 17, 12, 4, 18, 18, 16, 0, 0, 0, 0, 0]
+        }, {
+            name: '咸宁',
+            data: [0, 0, 13, 6, 12, 8, 10, 12, 0, 0, 0, 0]
+        }, {
+            name: '连云港',
+            data: [0, 1, 3, 8, 10, 0, 12, 10, 0, 0, 0, 0]
+        }, {
+            name: '杭州',
+            data: [0, 1, 2, 5, 9, 4, 4, 5, 0, 0, 0, 0]
+        },{
+            name: '柳州',
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        },]
+    });
+});
+
+
+</script>

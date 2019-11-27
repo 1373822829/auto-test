@@ -1,0 +1,62 @@
+'''
+预约登记管理
+'''
+div = [
+    {
+        'key':'/html/body/div[1]/div/div[2]/div[2]/div/div[2]',
+        'notes':'预约登记管理菜单',
+        'index':'0'
+    },
+   {
+        'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[1]/div[1]',
+        'notes':'预约区域',
+        'index':'1'
+    },
+   {
+       'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[1]/div',
+       'notes':'刷卡区域',
+       'index':'2'
+    },
+    {
+        'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div[1]/div[1]',
+        'notes':'未预约申请单/已预约申请单',
+        'index':'3'
+    },
+    {
+        'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div[2]',
+        'notes':'申请单列表区域',
+        'index':'4'
+    },
+    {
+        'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[1]/div',
+        'notes':'患者列表区域',
+        'index':'5'
+    },
+    {
+        'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/div/div[1]',
+        'notes':'申请单明细区域',
+        'index':'6'
+    },
+    {
+        'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[3]/div/div[2]/div[1]/div',
+        'notes':'预约日期选择区域',
+        'index':'7'
+    },
+    {
+        'key':'/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[3]/div/div[2]/div[2]/div/div[1]/div[1]/div[2]/div',
+        'notes':'预约资源明细区域',
+        'index':'8'
+    },
+   {
+       'key':'/html/body/div[9]',
+       'notes':'提示框',
+       'index':'9'
+    },
+    {
+        'key':'/html/body/div[9]/div[2]',
+        'notes':'确认预约框',
+        'index':'10'
+    }
+
+]
+

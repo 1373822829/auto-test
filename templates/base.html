@@ -1,0 +1,615 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TEST-自动化测试控制管理中心</title>
+	<link rel="shortcut icon" href="../static/images/basic.png" type="image/x-icon"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/layout.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/comm.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/IconExtension.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../static/themes/icon.css">
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../static/js/main.js"></script>
+	<script type="text/javascript" src="../static/js/edit.js"></script>
+    <script type="text/javascript" src="../static/js/JsonExportExcel.min.js"></script>
+</head>
+<body>
+    <div style="height: 100%;border-left: hidden" >
+        <div style="padding:5px 0;background-color: #f5f5f5;border:1px solid #8fb1de;">
+            <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'" group="" id="dd" style="margin-left: 5px" onclick="addTestCaseDetail()"><span class="l-btn-text" style="margin-left:1px">增加</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-edit'" group="" id="" onclick="updateTestCaseDetail()"><span class="l-btn-text" style="margin-left:1px">编辑</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-remove'" group="" id="" onclick="deleteTestCaseDetail()"><span class="l-btn-text" style="margin-left:1px">移除</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-move-up'" group="" id="" style="" onclick="moveup()"><span class="l-btn-text" style="margin-left:1px">上移</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-move-down'" group="" id="" onclick="movedown()"><span class="l-btn-text" style="margin-left:1px">下移</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-reload'" group="" id="" onclick="load_testcase_detail()"><span class="l-btn-text" style="margin-left:1px">刷新</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:''" group="" id="" onclick="importClick()"><span class="l-btn-text" style="margin-left:1px">上传用例</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:''" group="" id="" onclick="downFile()"><span class="l-btn-text" style="margin-left:1px">下载模板</span></a>
+            <a href="#" class="easyui-linkbutton l-btn-small" data-options="iconCls:'icon-ok'" group="" id="" onclick="action()"><span class="l-btn-text" style="margin-left:1px">运行</span></a>
+        </div>
+
+        <div id="dlg"  class="easyui-dialog" title="用例信息编辑" data-options="iconCls:'icon-save'" style="width:500px;height:300px;text-align: center;">
+
+            <div style="margin-bottom:20px;margin-top: 30px;">
+                <span>工作站:&nbsp;&nbsp;&nbsp;&nbsp;</span><select class="easyui-combobox" id="cb" name="state"  labelPosition="top" style="width:30%;"><option></option></select>
+                 <span style="margin-left: 10px">用例步骤:&nbsp;&nbsp;&nbsp;&nbsp;</span><select class="easyui-combobox" id="action_cb" name="state" labelPosition="top" style="width:30%"><option></option></select>
+            </div>
+
+            <div style="margin-bottom:20px">
+                <span>运行次数:&nbsp;&nbsp;</span><input id="ss" class="easyui-numberspinner" value=1 style="border:1px solid #95b8e7;width:100px;border-radius:4px;width:30%;height: 25px" required="required" data-options="min:1,max:10,editable:true">
+               <span style="margin-left: 10px">sheet名字:&nbsp;&nbsp;</span><select class="easyui-combobox" id="sheet_cb" name="state" label="" labelPosition="top" style="width:30%"><option></option></select>
+
+            </div>
+
+            <div style="margin-bottom:20px">
+                <span>取值方式:&nbsp;&nbsp;</span><select class="easyui-combobox" id="way_cb" name="state" label="" labelPosition="top" style="width:30%"><option>顺序</option><option>随机</option></select>
+               <span style="margin-left: 10px">数据缓存:&nbsp;&nbsp;&nbsp;&nbsp;</span><select class="easyui-combobox" id="cache_cb" name="state" label="" labelPosition="top" style="width:30%"><option>是</option><option>否</option></select>
+
+            </div>
+
+            <div style="margin-bottom:20px;margin-left: -47%">
+                <form>
+                    <span>用例数据:&nbsp;&nbsp;</span>
+                    <input class="easyui-filebox" id="data" labelposition="top" data-options="prompt:''" style="width: 20%; display: none;">
+                </form>
+            </div>
+        </div>
+
+        <table class="easyui-datagrid" id="dg"
+            data-options="url:'',method:'',singleSelect:false,fit:true,fitColumns:true" style="">
+        </table>
+
+        <div class="easyui-window" id="import-excel-template" title="文件上传" style="width:400px;height:160px;padding:2px;" closed="true">
+            <form id="importFileForm" method="post" enctype="multipart/form-data" style="">
+                <table style="margin:5px;height:70px;">
+                    <tr>
+                        <td style="font-size: 14px">请选择文件</td>
+                        <td width="5px;"></td>
+                        <td><input class="easyui-filebox" id="fileImport" data-options="prompt:'选择文件...'" labelposition="top" style="width: 260px;"></td>
+                        <td></td></tr>
+                    <tr>
+                        <td colspan="4"><label id="fileName" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <label id="uploadInfo" />
+                        </td>
+                    </tr>
+                </table><div style="text-align:center;clear:both;margin:5px;">
+                    <a id="uploadFile" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="importFileClick()"style="width: 80px">&nbsp;上传</a>
+                    <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" onclick="closeImportClick()" style="width: 80px">&nbsp;关闭</a>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
+<script type="text/javascript">
+    var max_num = ''
+    var test_data;
+    var state;
+    $('#dg').datagrid({
+                        columns : [[
+                                {field:'box',checkbox:true,width:10,align:'center'},
+                                {field:'testcase_num',title:'用例编号',width:80,align:'center',sortable:true},
+                                {field:'workstation',title:'工作站',width:80,align:'center',sortable:true},
+                                {field:'action',title:'用例步骤',width:80,align:'center',sortable:true},
+                                {field:'data',title:'用例数据（execl）',width:80,align:'center',sortable:true},
+                                {field:'sheet_name',title:'sheet名字',width:80,align:'center',sortable:true},
+                                {field:'get_value_way',title:'数据取值方式',width:80,align:'center',sortable:true},
+                                {field:'iscache',title:'数据缓存',width:80,align:'center',sortable:true},
+                                {field:'runtime',title:'运行次数',width:80,align:'center',sortable:true},
+
+                            ]],
+                    })
+    $(function(){
+        $('#dlg').dialog({
+             buttons: [{
+                id:'upLoadFile',
+                width:100,
+                text: '保存',
+                iconCls: 'icon-ok',
+                handler: function () {
+                    console.log($('#upLoadFile'))
+                    var row = $('#dg').datagrid('getSelected');
+                    var testcase_name = GetQueryString('name');
+                    var testcase_id = GetQueryString('id');
+                    var workstation = $('#cb').combobox('getText');
+                    var action = $('#action_cb').combobox('getText');
+                    var runtime = $('#ss').val()
+                    var sheet_name = $('#sheet_cb').combobox('getText')
+                    var get_value_way = $('#way_cb').combobox('getText')
+                    var iscache = $('#cache_cb').combobox('getText')
+                    var testcase_num = max_num+1
+                    if  (testcase_name==null || testcase_name.trim()==''){
+                        $.messager.alert('警告','测试用例名字不能为空！','warning')
+                        return
+                    }
+                    if(workstation==null || workstation.trim()==''){
+                        $.messager.alert('警告','工作站不能为空！','warning')
+                        return
+                    }
+                    if(action==null || action.trim()==''){
+                        $.messager.alert('警告','用例步骤不能为空！','warning')
+                        return
+                    }
+                    if(runtime==null || runtime.trim()==''){
+                        $.messager.alert('警告','运行次数不能为空！','warning')
+                        return
+                    }
+                    if(sheet_name==null || sheet_name.trim()==''){
+                        $.messager.alert('警告','sheet名字不能为空！','warning')
+                        return
+                    }
+                    if(get_value_way==null || get_value_way.trim()==''){
+                        $.messager.alert('警告','取值方式不能为空！','warning')
+                        return
+                    }
+                    if(iscache==null || iscache.trim()==''){
+                        $.messager.alert('警告','数据缓存不能为空！','warning')
+                        return
+                    }else {
+                        iscache = (iscache == '是'?1:0)
+
+                    }
+                    if (state){
+                        if(max_num==0){
+                            test_data = $('#data').textbox('getValue');
+                        }
+                        if(test_data==null || test_data.trim()==''){
+                            $.messager.alert('警告','用例数据不能为空！','warning')
+                            return
+                        }
+                        $.ajax({
+                            type : 'post',
+                            url : basePath+'addTestCaseDetail/',
+                            async : false,
+                            dataType : 'json',
+                            data : {'testcase_name':testcase_name,'workstation':workstation,'action':action,'runtime':runtime,'testcase_id':testcase_id,
+                                   'sheet_name':sheet_name,'get_value_way':get_value_way,'iscache':iscache,'data':test_data,'testcase_num':testcase_num},
+                            success: function (data) {
+                                $.messager.show({
+                                    title: 'Success',
+                                    msg: data
+                                })
+                                load_testcase_detail()
+                                $('#dlg').dialog('close');
+                            },
+                            error :function (data) {
+                                $('#dlg').dialog('close');
+                                $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+                            }
+                        })
+                    }else{
+                        if(row.testcase_num==1){
+                            test_data = $('#data').textbox('getValue')
+                            }
+                            console.log(test_data)
+                        if(test_data==null || test_data.trim()==''){
+                            $.messager.alert('警告','用例数据不能为空！','warning')
+                            return
+                        }
+                        $.ajax({
+                            type : 'post',
+                            url : basePath+'updateTestCaseDetail/',
+                            async : false,
+                            dataType : 'json',
+                            data : {'id':row.id,'testcase_name':testcase_name,'workstation':workstation,'action':action,'runtime':runtime,'testcase_id':testcase_id,
+                                   'sheet_name':sheet_name,'get_value_way':get_value_way,'iscache':iscache,'data':test_data,'testcase_num':row.testcase_num},
+                            success: function (data) {
+                                $.messager.show({
+                                    title: 'Success',
+                                    msg: data
+                                })
+{#                                alert($("input[type='file']").val())#}
+                                load_testcase_detail()
+                                $('#dlg').dialog('close');
+                            },
+                            error :function (data) {
+                                $('#dlg').dialog('close');
+                                $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+                            }
+                        })
+
+                    }
+
+                }
+            }, {
+                width:100,
+                text: '取消',
+                iconCls: 'icon-cancel',
+                handler: function () {
+                    $('#dlg').dialog('close');
+                }
+            }]
+        })
+        $('#dlg').dialog('close');
+        $('#dlg1').dialog('close');
+        load_testcase_detail()
+
+
+
+    })
+
+    function GetQueryString(name)
+        {
+             var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+             var r = window.location.search.substr(1).match(reg);
+             if(r!=null)return  decodeURI(r[2]); return null;
+        }
+    function load_testcase_detail() {
+         // 获取测试用例信息
+        $.ajax({
+            type : "post",
+            url : basePath+'testcase_detail/',
+            async : false,
+            dataType : 'json',
+            data : {'testcase_id':GetQueryString('id')},
+            beforeSend: function (xhr, settings) {
+                            //此处调用刚刚加入的js方法
+                            var csrftoken = getCookie('csrftoken');
+                            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+
+                            }
+                            },
+            success : function (data) {
+                                $('#dg').datagrid('loadData',data['data'])
+                                if (data['data'].length>0){
+                                    max_num = ((data['data'])[(data['data'].length-1)])['testcase_num']
+                                    test_data = ((data['data'])[(data['data'].length-1)])['data']
+                                }else{
+                                    max_num = 0;
+                                }
+            },
+            error :function (data) {
+                $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+            }
+
+        })
+
+    }
+    function addTestCaseDetail() {
+        state = true;
+        $('#dlg').dialog('open');
+        $('#cb').combobox('setText','');
+        $('#action_cb').combobox('setText','');
+        $('#ss').val(1);
+        $('#sheet_cb').combobox('setText','');
+        $('#way_cb').combobox('setText','');
+        $('#cache_cb').combobox('setText','');
+        if (max_num == 0){
+            test_data = ''
+            $('#data').combobox('enable');
+        }else{
+            $('#data').combobox('disable')
+        }
+        load_combobox();
+
+    }
+    function updateTestCaseDetail() {
+        state = false;
+        load_combobox();
+        var row = $('#dg').datagrid('getSelected');
+        if (row == null){
+            $.messager.alert('提示','没有要编辑的用例！','warning')
+            return
+        }
+        var box = $('#dg').datagrid('getChecked')
+        if(box.length>1){
+             $.messager.alert('提示','请选择一条数据！','warning')
+             return
+        }
+        $('#dlg').dialog('open')
+        $('#cb').combobox('setText',row.workstation)
+        $('#action_cb').combobox('setText',row.action)
+        $('#ss').val(row.runtime)
+        $('#sheet_cb').combobox('setText',row.sheet_name)
+        $('#way_cb').combobox('setText',row.get_value_way)
+        $('#cache_cb').combobox('setText',row.iscache)
+{#        $('#data').textbox('setValue',row.data);#}
+        if (row.testcase_num == 1){
+            $('#data').combobox('enable')
+        }else{
+            $('#data').combobox('disable')
+        }
+
+    }
+
+    function moveup() {
+        var row = $('#dg').datagrid('getSelected');
+        if(row==null){
+            $.messager.alert({title:'提示',msg:'请选择用例！',icon:'warning'});
+        }
+        var row_up;
+        var rows = $('#dg').datagrid('getRows')
+        for(var i = 0;i<rows.length;i++){
+            if (rows[i] == row){
+                if(i<1){
+                     $.messager.alert({title:'提示',msg:'不能上移！',icon:'warning'});
+                }else{row_up = rows[i-1]}
+            }
+        }
+        url = basePath+'moveUp/';
+        datas = {'id':row.id,'testcase_num':row.testcase_num,'up_id':row_up.id,'up_testcase_num':row_up.testcase_num}
+        move(url,datas)
+    }
+    function movedown() {
+        var row = $('#dg').datagrid('getSelected');
+        if(row==null){
+            $.messager.alert({title:'提示',msg:'请选择用例！',icon:'warning'});
+        }
+        var row_down;
+        var rows = $('#dg').datagrid('getRows');
+        for(var i = 0;i<rows.length;i++){
+            if (rows[i] == row){
+                if(i+1==rows.length){
+                    $.messager.alert({title:'提示',msg:'不能下移！',icon:'warning'});
+                    return
+                }else {row_down = rows[i+1]}
+
+            }
+        }
+        url = basePath+'moveDown/';
+        datas = {'id':row.id,'testcase_num':row.testcase_num,'down_id':row_down.id,'down_testcase_num':row_down.testcase_num}
+        move(url,datas)
+
+    }
+
+    function move(url,datas) {
+        $.ajax({
+            type:'post',
+            url:url,
+            ansy:false,
+            dataType:'json',
+            data:datas,
+            success:function (data) {
+                $.messager.show({title:'Success',msg:data});
+                load_testcase_detail()
+            },
+
+            error:function (data) { $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})}
+        })
+
+
+    }
+
+    function load_combobox() {
+         $.ajax({
+          url: basePath+'load_workstation/',
+          type : 'get',
+          async : false,
+          dataType: 'json',
+          success: function (data) {
+              console.log(data['workstation'])
+              $('#cb').combobox({
+                  data:data['workstation'],
+                  valueField:'id',
+                  textField:'text',
+                  onSelect: function (data) {
+                      $.ajax({
+                            type : 'get',
+                            url : basePath+'load_action/?workstation='+data.text,
+                            async : false,
+                            dataType : 'json',
+                            success : function (data1) {
+                                console.log(data1.action)
+                                $('#action_cb').combobox({
+                                    data:data1.action,
+                                    valueField:'id',
+                                    textField:'text',
+                                    onSelect:function (data) {
+                                        for (var i=0;i< data1.sheet_name.length;i++){
+                                            if (data1.sheet_name[i]['id'] == data.id){
+                                                $('#sheet_cb').combobox({
+                                                    data:[data1.sheet_name[i]],
+                                                    valueField:'id',
+                                                    textField:'text'
+                                                })
+                                            }
+                                        }
+
+
+                                    }
+                                })
+
+
+
+                            },
+                            error :function (data) {
+                                $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+                            }
+
+                      })
+
+                  }
+              });
+              }
+        });
+
+    }
+
+    function deleteTestCaseDetail() {
+        var row = $('#dg').datagrid('getSelected');
+        if (row == null){
+            $.messager.alert('提示','没有要删除的用例！','warning')
+            return
+        }
+        var box = $('#dg').datagrid('getChecked');
+        if(box.length>1){
+             $.messager.alert('提示','请选择一条数据！','warning')
+             return
+        }
+        $.messager.confirm('温馨提示','确定删除用例？',function(r){
+            if(r){
+                 $.ajax({
+                            type : 'post',
+                            url : basePath+'deleteTestCaseDetail/',
+                            async : false,
+                            dataType : 'json',
+                            data : {'id':row.id},
+                            success: function (data) {
+                                if (data.status){
+                                    $.messager.show({
+                                        title: 'Success',
+                                        msg: data.message
+                                    })
+                                    load_testcase_detail();
+                                    $('#dlg').dialog('close');
+                                }else {
+                                    $.messager.alert('提示',data.message,'warning')
+                                }
+
+                            },
+                            error :function (data) {
+                                $('#dlg').dialog('close');
+                                $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+                            }
+                        })
+
+            }
+        })
+    }
+
+    function action() {
+        var id = GetQueryString('id');
+        $.ajax({
+                type : 'get',
+                url : basePath+'action/',
+                async : false,
+                dataType : 'json',
+                data : {'id':id},
+                beforeSend: function () {
+                                var win = $.messager.progress({
+                                    title: '请稍等',
+                                    msg: '用例执行中...',
+                                    interval:'600'
+                                });
+                            },
+
+                complete: function () {
+                    //AJAX请求完成时隐藏loading提示
+                    $(document).ready(function () {
+                        $.messager.progress('close');
+                    });
+
+                },
+
+                success: function (data) {
+                    $.messager.show({
+                                    title: 'Success',
+                                    msg: data
+                                })
+                            },
+                error :function (data) {
+                    $.messager.alert({title:'错误',msg:data.responseText,icon:'error',height:200})
+                }
+
+            })
+
+    }
+    //导入事件，显示导入弹出窗口
+    function importClick() {
+        $('#import-excel-template').window('open');
+        document.getElementById("importFileForm").style.display = "block";
+    }
+    //关闭导入弹出窗口
+    function closeImportClick() {
+        $('#fileImport').filebox('setText',null);
+        document.getElementById('fileName').innerHTML = "";
+        document.getElementById('uploadInfo').innerHTML = "";
+        $('#import-excel-template').window('close');
+    }
+    //导入文件
+    function importFileClick() {
+        //获取上传文件控件内容
+        var file = $('#fileImport').next().find('input[type="file"]')[0].files[0];
+        //判断控件中是否存在文件内容，如果不存在，弹出提示信息，阻止进一步操作
+        if (file == null) {
+            $.messager.alert('错误', '请选择文件', 'warning');
+            return;
+        }
+        //获取文件名称
+        var fileName = file.name;
+        //获取文件类型名称
+        var file_typename = fileName.substring(fileName.lastIndexOf('.'), fileName.length);
+        //这里限定上传文件文件类型必须为.xlsx，如果文件类型不符，提示错误信息
+        if (file_typename == '.xlsx' || file_typename == '.xls') {
+            //计算文件大小
+            var fileSize = 0;
+            //如果文件大小大于1024字节X1024字节，则显示文件大小单位为MB，否则为KB
+            if (file.size > 1024 * 1024) {
+                fileSize = Math.round(file.size * 100 / (1024 * 1024)) / 100;
+
+                if (fileSize > 10) {
+                    $.messager.alert('错误', '文件超过10MB，禁止上传！', 'warning');
+                    return;
+                }
+                fileSize = fileSize.toString() + 'MB';
+
+            }
+            else {
+                fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
+            }
+
+            //将文件名和文件大小显示在前端label文本中
+            document.getElementById('fileName').innerHTML = "<span style='color:Blue;font-weight:normal'>文件名: " + file.name + ",大小: " + fileSize + "</span>";
+            //获取form数据
+            var formData = new FormData();
+            formData.append("file",file);
+            formData.append("testcase_id",GetQueryString('id'))
+            //调用apicontroller后台action方法，将form数据传递给后台处理。contentType必须设置为false,否则chrome和firefox不兼容
+            console.log(typeof(formData))
+            $.ajax({
+                url: basePath + "upLoadFile/",
+                type: 'POST',
+                data: formData,
+                async: false,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (returnInfo) {
+                    //上传成功后将控件内容清空，并显示上传成功信息
+                    $('#fileImport').filebox('setText',null);
+                    document.getElementById('uploadInfo').innerHTML = "<span style='color:Red;font-weight:normal'>" + returnInfo + "</span>";
+                },
+                error: function (returnInfo) {
+                    //上传失败时显示上传失败信息
+                    document.getElementById('uploadInfo').innerHTML = "<span style='color:Red;font-weight:normal'>" + returnInfo + "</span>";
+                }
+            });
+        }else{
+            $.messager.alert('错误','文件类型错误！','warning');
+            //将错误信息显示在前端label文本中
+            document.getElementById('fileName').innerHTML = "<span style='color:Red;font-weight:normal'>错误提示:上传文件应该是.xlsx后缀而不应该是" + file_typename + ",请重新选择文件</span>"
+        }
+    }
+
+    //下载模板
+    function downFile() {
+        var option={};
+        option.fileName = '201708181439';
+        option.datas=[
+          {
+              sheetData:[{one:'王杰',two:'%E?;2501201607=99015017014%E','three':'神经内科'},{one:'王杰',two:'%E?;2501201607=99015017014%E','three':'神经内科'}],
+              sheetName:'挂号',
+              sheetFilter:['three','two','one'],
+              sheetHeader:['用户名','卡号','科室'],
+
+          },
+          {
+              sheetName:'就诊',
+              sheetHeader:['用户','诊断'],
+              sheetFilter:['two','one'],
+              sheetData:[{one:'王杰',two:'测试诊断'},{one:'王杰',two:'测试诊断'}]
+          }
+        ];
+        var toExcel=new ExportJsonExcel(option);
+        toExcel.saveExcel();
+    };
+    
+</script>
