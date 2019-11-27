@@ -1,9 +1,9 @@
 # auto-test
 python自动化测试平台
-项目描述：主要是通过平台对测试用例进行管理及运行\br
-后端：python+selenium+django \br
-前端：EasyUI+jquery \br
-数据库：mysql \br
+项目描述：主要是通过平台对测试用例进行管理及运行  
+后端：python+selenium+django  
+前端：EasyUI+jquery  
+数据库：mysql  
 
 实现的功能模块有：
 ### 1.新增工作站
