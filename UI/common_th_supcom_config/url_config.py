@@ -26,7 +26,7 @@ log_dir= os.path.join(dir, r"temp\log\log.txt")
 print_title = [u'将打印输出另存为',u'文件另存为']
 #院区
 HOSPITA_AREA = '古奥院区'
-#院区code(光谷：2，中法：3)
+#院区code(GUAO：2，KEJI：3)
 HOSPITA_CODE = 2
 
 
