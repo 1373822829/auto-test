@@ -11,7 +11,7 @@ def Login(browser):
     browser.implicitly_wait(30)
     usernameElement = browser.find_element_by_xpath(LoginElement.input[0]['key'])
     usernameElement.clear()
-    usernameElement.send_keys('jfli')
+    usernameElement.send_keys('jwang')
     pswElement = browser.find_element_by_xpath(LoginElement.input[1]['key'])
     pswElement.clear()
     pswElement.send_keys('123456' + '\n')
