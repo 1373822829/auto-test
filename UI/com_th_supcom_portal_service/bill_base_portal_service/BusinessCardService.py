@@ -172,7 +172,7 @@ def test_businessCard(browser,cache):
 if __name__ == "__main__":
     browser = common.browser()
     cache = Cache({})
-    testcase = {'用户名': 'jfli', '密码': '123456'}
+    testcase = {'用户名': 'jwang', '密码': '123456'}
     cache.set('resultType', '1')
     cache.set('specialName', '急诊内科')
     cache.set('userId', '%E?;2001065723=99015011437?+E?')
